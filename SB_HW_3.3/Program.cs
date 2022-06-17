@@ -1,19 +1,18 @@
-﻿Console.WriteLine("Введите проверяемое число");
+Console.WriteLine("Введите проверяемое число");
 int userNum = int.Parse(Console.ReadLine());
+
+int N = userNum - 1;
+bool result = true;
 int i = 2;
 
-while (userNum > 0)
+while (1 < N)
 {
-    if (userNum % i == 0)
-    {
-        Console.WriteLine($"Число {userNum} - не является простым");
-        break;
-    }
-    else
-    {
-        Console.WriteLine($"Число {userNum} является простым");
-    }
-
+        if (N % i == 0)
+        {
+            result = false;
+            i++;
+        }
+        if (result) Console.WriteLine("Введенное число не является простым");
+        else Console.WriteLine("Введенное число является простым");
     break;
-}
-
+};
